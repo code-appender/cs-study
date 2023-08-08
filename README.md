@@ -38,7 +38,14 @@ https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 
 
 ## 🍀네트워크 
-- Http는 Stateful 한가요?
+<details>
+<summary>Http는 Stateful 한가요?</summary>
+<div markdown="1">
+
+안녕
+
+</div>
+</details>
 - TCP와 UDP의 차이점에 대해서 설명하기
 - 웹 브라우저가 웹 사이트를 렌더링 하는 과정에 대해서 설명하기
 - Synchronous & Asynchronous와 Blocking & Nonblocking의 차이
