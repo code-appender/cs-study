@@ -45,13 +45,14 @@ https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 안녕
 
 </div>
-</details>
-- TCP와 UDP의 차이점에 대해서 설명하기
-- 웹 브라우저가 웹 사이트를 렌더링 하는 과정에 대해서 설명하기
-- Synchronous & Asynchronous와 Blocking & Nonblocking의 차이
-- 대칭키, 비대칭키 암호화 방식에 대해 설명
-- GET과 POST 차이를 설명
-- TCP/IP 프로토콜 4계층 종류와 설명
+</details> 
+
+- TCP와 UDP의 차이점에 대해서 설명하기 
+- 웹 브라우저가 웹 사이트를 렌더링 하는 과정에 대해서 설명하기 
+- Synchronous & Asynchronous와 Blocking & Nonblocking의 차이 
+- 대칭키, 비대칭키 암호화 방식에 대해 설명 
+- GET과 POST 차이를 설명 
+- TCP/IP 프로토콜 4계층 종류와 설명 
 - IP란 무엇인가? IP의 풀네임 및 정의
 - 게이트 웨이란?
 - HTTPS 프로토콜이란?
