@@ -89,7 +89,28 @@ keep-alive : 서버의 HTTP요청시, 요청 message 헤더 추가
 - 프록시에 대해서 설명해주세요
 - 서브넷 마스크에 대해서 설명해주세요
 - 매체 접근 제어 (Media Access Control)에 대해서 설명해주세요
-- patch put post의 차이
+
+<details>
+<summary> patch put post의 차이 </summary>
+<div markdown="1">
+
+### POST(create)
+리소스의 생성을 담당한다.  
+요청시마다 새로운 리소스를 할당한다. 
+
+### PUT(update)
+멱등성을 보장한다 (여러번 보내도 같은 리소스를 반환한다)  
+리소스의 생성과 수정을 담당한다.  
+수정시 전체를 덮어쓴다.  
+
+### PATCH(update)
+수정만 담당하며 리소스의 일부분만 수정할때 사용한다. (일부만 업데이트)  
+PATCH는 멱등하지 않다. 하지만 멱등으로 설계할 수도 있다.  
+
+
+</div>
+</details> 
+
 - TCP/IP 혼잡 제어 기법이 왜 사용되는가?
 - TCP 연결 설정 과정과 연결 종료 과정의 단계가 다른 이유?
 - 3-Handshaking과 4-Handshaking의 과정을 설명해주세요.
