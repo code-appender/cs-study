@@ -63,7 +63,28 @@ https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 - CORS는 무엇인가요?
 - CSRF는 무엇인가요?
 - OSI 7 Layer 또는 TCP/IP Layer에서 계층화하는 이유가 무엇인가요?
-- 현대 웹 에서는 비연결성을 해결방법을 설명해주세요.
+<details>
+<summary> 현대 웹 에서는 비연결성을 해결방법을 설명해주세요.</summary>
+<div markdown="1">
+
+- 비 연결성 :  HTTP 요청에 대한 응답을 제공한 후에 연결을 끊는다. 
+- 비 상태성 : HTTP 요청과 응답하는 동안 상태를 저장하지 않는다.  
+
+### HTTP 비지속 연결
+![connectionless.png](images/img2_connectionless.png)
+서버에서 응답이후에 TCP에게 연결을 끊으라고 요청하고 HTTP클라이언트가 응답메시지를 받으면 TCP 연결이 중단된다.   
+(연결이 유지 되지 않는다, 즉 하나의 요청메세지와 하나의 응답메시지에 하나의 연결이다)
+
+
+### HTTP 지속 연결(Persistent Connections)
+![persist_connection.png](images/img1_persist_connection.png)
+HTTP/1.1 부터 Keep-Alive 기능이 추가되어 하나의 TCP연결로 여러개의 요청과 응답을 처리할 수 있다.
+일정시간 동안 연결을 유지해서 요청과 응답이 모두 끝날때까지 연결해준다.
+keep-alive : 서버의 HTTP요청시, 요청 message 헤더 추가   
+
+</div>
+</details> 
+
 - 로드 밸런싱이란 무엇인가요
 - 프록시에 대해서 설명해주세요
 - 서브넷 마스크에 대해서 설명해주세요
