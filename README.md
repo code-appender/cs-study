@@ -112,8 +112,19 @@ PATCH는 멱등하지 않다. 하지만 멱등으로 설계할 수도 있다.
 </details> 
 
 - TCP/IP 혼잡 제어 기법이 왜 사용되는가?
-- TCP 연결 설정 과정과 연결 종료 과정의 단계가 다른 이유?
 - 3-Handshaking과 4-Handshaking의 과정을 설명해주세요.
+
+<details>가
+<summary> TCP 연결 설정 과정과 연결 종료 과정의 단계가 다른 이유는 무엇인가? </summary>
+<div markdown="1">
+
+연결 과정에서는 연결 과정 수립을 위한 최소한의 설정을 진행한다.  
+종료 과정시에는 Client가 데이터 전송을 마쳤다고 하더라도 Server는 아직 보낼 데이터가 남아있을 수 있기 때문에   
+일단 FIN에 대한 ACK만 보내고, 데이터를 모두 전송한 후에 자신도 FIN 메시지를 보내는 방식으로 진행되어야 하기 때문이다.
+
+</div>
+</details>  
+
 - LAN과 WAN의 차이
 - Cookie와 Session의 차이
 - DNS서버 란?
