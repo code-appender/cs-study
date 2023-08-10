@@ -63,15 +63,68 @@ https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 - CORS는 무엇인가요?
 - CSRF는 무엇인가요?
 - OSI 7 Layer 또는 TCP/IP Layer에서 계층화하는 이유가 무엇인가요?
-- 현대 웹 에서는 비연결성을 해결방법을 설명해주세요.
+<details>
+<summary> 현대 웹 에서는 비연결성을 해결방법을 설명해주세요.</summary>
+<div markdown="1">
+
+- 비 연결성 :  HTTP 요청에 대한 응답을 제공한 후에 연결을 끊는다. 
+- 비 상태성 : HTTP 요청과 응답하는 동안 상태를 저장하지 않는다.  
+
+### HTTP 비지속 연결
+![connectionless.png](images/img2_connectionless.png)
+서버에서 응답이후에 TCP에게 연결을 끊으라고 요청하고 HTTP클라이언트가 응답메시지를 받으면 TCP 연결이 중단된다.   
+(연결이 유지 되지 않는다, 즉 하나의 요청메세지와 하나의 응답메시지에 하나의 연결이다)
+
+
+### HTTP 지속 연결(Persistent Connections)
+![persist_connection.png](images/img1_persist_connection.png)
+HTTP/1.1 부터 Keep-Alive 기능이 추가되어 하나의 TCP연결로 여러개의 요청과 응답을 처리할 수 있다.
+일정시간 동안 연결을 유지해서 요청과 응답이 모두 끝날때까지 연결해준다.
+keep-alive : 서버의 HTTP요청시, 요청 message 헤더 추가   
+
+</div>
+</details> 
+
 - 로드 밸런싱이란 무엇인가요
 - 프록시에 대해서 설명해주세요
 - 서브넷 마스크에 대해서 설명해주세요
 - 매체 접근 제어 (Media Access Control)에 대해서 설명해주세요
-- patch put post의 차이
+
+<details>
+<summary> patch put post의 차이 </summary>
+<div markdown="1">
+
+### POST(create)
+리소스의 생성을 담당한다.  
+요청시마다 새로운 리소스를 할당한다. 
+
+### PUT(update)
+멱등성을 보장한다 (여러번 보내도 같은 리소스를 반환한다)  
+리소스의 생성과 수정을 담당한다.  
+수정시 전체를 덮어쓴다.  
+
+### PATCH(update)
+수정만 담당하며 리소스의 일부분만 수정할때 사용한다. (일부만 업데이트)  
+PATCH는 멱등하지 않다. 하지만 멱등으로 설계할 수도 있다.  
+
+
+</div>
+</details> 
+
 - TCP/IP 혼잡 제어 기법이 왜 사용되는가?
-- TCP 연결 설정 과정과 연결 종료 과정의 단계가 다른 이유?
 - 3-Handshaking과 4-Handshaking의 과정을 설명해주세요.
+
+<details>가
+<summary> TCP 연결 설정 과정과 연결 종료 과정의 단계가 다른 이유는 무엇인가? </summary>
+<div markdown="1">
+
+연결 과정에서는 연결 과정 수립을 위한 최소한의 설정을 진행한다.  
+종료 과정시에는 Client가 데이터 전송을 마쳤다고 하더라도 Server는 아직 보낼 데이터가 남아있을 수 있기 때문에   
+일단 FIN에 대한 ACK만 보내고, 데이터를 모두 전송한 후에 자신도 FIN 메시지를 보내는 방식으로 진행되어야 하기 때문이다.
+
+</div>
+</details>  
+
 - LAN과 WAN의 차이
 - Cookie와 Session의 차이
 - DNS서버 란?
