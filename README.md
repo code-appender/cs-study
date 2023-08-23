@@ -275,5 +275,17 @@ PATCH는 멱등하지 않다. 하지만 멱등으로 설계할 수도 있다.
 <details>
 <summary>cpu 스케줄링 기법중 비 선점 방식과 선점 방식의 차이를 말해주세요</summary>
 
+선점형 스케줄링(Preemptive Scheduling)
+- 한 프로세스가 CPU를 할당받아서 실행하고 있을때 다른 프로세스가 cpu를 사용하고 있는 프로세스를 중지 시키고 cpu를 차지할 수 있는 스케줄링 기법(처리시간 예측이 어렵다)
+- 우선순위가 중요하거나 빠른 응답을 요구하는 시분할 시스템에 유리하다
+- 컨텍스트 스위치등이 발생하면서 오버헤드가 발생한다.
+- Round Robin(RR) ,SRT(Shortest Remaining Time), 선점 우선순위, Multilevel Queue Scheduling  등의 알고리즘이 있다.     
+
+비선점형 스케줄링(Non-preemptive / Cooperative Scheduling) 
+- 이미 사용되는 cpu를 빼았지 못하고 사용이 끝날 때 까지 기다리는 스케줄링 기법(처리시간 예측이 용이하다)
+- 응답시간예측이 가능하고 일괄처리 방식이 적합하다.
+- 중요도가 있는 작업인 경우 사용하기에 좋지 않다.
+- FCFS,SJN(Shortest Job Next) ,LJF(Longest Job First), 비 선점 우선순위, Highest Response Ratio Next (HRRN)등이 있다
+
+
 </details>
- 선점 방식의 차이를 말해주세요
